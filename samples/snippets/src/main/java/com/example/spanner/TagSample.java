@@ -32,7 +32,7 @@ public class TagSample {
     // This transaction tag will be applied to all the individual operations inside this
     // transaction.
     databaseClient
-        .readWriteTransaction(Options.tag("app=concert,env=dev"))
+        .readWriteTransaction(Options.tag("app=concert,env=dev,action=update"))
         .run(transaction -> {
           // Sets the request tag to "app=concert,env=dev,action=update".
           // This request tag will only be set on this request.
